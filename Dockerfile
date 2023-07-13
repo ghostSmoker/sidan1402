@@ -18,13 +18,13 @@ RUN apt-get update && \
     apt-get clean
 
 # update pip
-RUN pip install --upgrade pip
+#RUN pip install --upgrade pip
 # install psycopg for connect to pgsql
 RUN pip install psycopg2-binary
 # install python packages
 RUN pip install -r requirements.txt
 # create static directory
 RUN mkdir static
-#RUN python manage.py runserver
+RUN python manage.py runserver
 EXPOSE 8080
-CMD ["gunicorn","--bind", ":8080", "app.wsgi:application"]
+#CMD ["gunicorn","--bind", ":8080", "app.wsgi:application"]
