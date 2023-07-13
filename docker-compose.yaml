@@ -6,13 +6,12 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - static:/app/staticfiles
+      - static:/static
     restart: always
     ports:
-      - "5000:5000"
+      - "8080:8080"
     networks:
       - web_nw
-      - nginx_nw
     depends_on:
       - db
   db:
@@ -33,6 +32,4 @@ volumes:
     external: true
 networks:
   web_nw:
-    external: true
-  nginx_nw:
     external: true
