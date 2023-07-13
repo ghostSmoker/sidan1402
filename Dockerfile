@@ -25,6 +25,6 @@ RUN pip install psycopg2-binary
 RUN pip install -r requirements.txt
 # create static directory
 RUN mkdir static
-RUN python manage.py collectstatic --no-input
+#RUN python manage.py runserver
 EXPOSE 8080
-#CMD ["gunicorn","--bind", ":5000", "core.wsgi:application"]
+CMD ["gunicorn","--bind", ":8080", "app.wsgi:application"]
