@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u9z3e7ij+v)a8xw73!3w=t+^9lnf+joc9da6u3cz2sqjvb@6)-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -124,8 +124,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'F:/samanemoadian/moadianproject-main/build')
+#STATIC_URL = 'static/'
+#STATIC_ROOT = os.path.join(BASE_DIR, 'F:/samanemoadian/moadianproject-main/build')
 
 
 # Default primary key field type
@@ -134,12 +134,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'F:/samanemoadian/moadianproject-main/build
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-        'http://localhost:3000'
+        '*:8080'
 ]
 AUTH_USER_MODEL = 'core.User'
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ORGIN_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_WHITELIST = ['http://localhost:8080','http://localhost:3000','https://localhost:5001']
+CORS_ORIGIN_WHITELIST = ['http://*:8080','http://*:8080','https://*:8080']
 CORS_ALLOW_CREDENTIALS = True
 SESSION_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_HTTPONLY = True
