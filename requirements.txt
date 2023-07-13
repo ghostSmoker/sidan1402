@@ -1,3 +1,4 @@
+gunicorn
 cryptography==41.0.1
 Django==4.2.3
 django-cors-headers==4.2.0
